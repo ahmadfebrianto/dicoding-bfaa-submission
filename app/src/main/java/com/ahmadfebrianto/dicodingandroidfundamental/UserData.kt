@@ -110,14 +110,14 @@ object UserData {
             val list = arrayListOf<User>()
             for (index in userUserName.indices) {
                 val user = User()
+                user.profile = userProfile[index]
                 user.userName = userUserName[index]
                 user.fullName = userFullName[index]
                 user.location = userLocation[index]
-                user.repository = userRepo[index]
                 user.company = userCompany[index]
+                user.repository = userRepo[index]
                 user.follower = userFollower[index]
                 user.following = userFollowing[index]
-                user.profile = userProfile[index]
 
                 list.add(user)
             }

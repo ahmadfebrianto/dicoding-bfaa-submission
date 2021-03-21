@@ -6,19 +6,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import org.w3c.dom.Text
 
 class UserDetail : AppCompatActivity() {
 
     companion object {
-        const val USER_PROFILE = "user_profile"
-        const val USER_FULLNAME = "user_fullname"
-        const val USER_USERNAME = "user_username"
-        const val USER_LOCATION = "user_location"
-        const val USER_COMPANY = "user_company"
-        const val USER_REPO = "user_repo"
-        const val USER_FOLLOWERS = "user_followers"
-        const val USER_FOLLOWING = "user_following"
+        const val USER_OBJECT = "user_object"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,32 +21,34 @@ class UserDetail : AppCompatActivity() {
         actionBar?.title = "User Detail"
         actionBar?.setDisplayHomeAsUpEnabled(true)
 
+        val user = intent.getParcelableExtra<User>(USER_OBJECT) as User
+
         val userProfile: ImageView = findViewById(R.id.user_profile)
         Glide.with(this)
-            .load(intent.getStringExtra(USER_PROFILE)?.toInt())
+            .load(user.profile)
             .apply(RequestOptions())
             .into(userProfile)
 
         val userFullName: TextView = findViewById(R.id.full_name)
-        userFullName.text = intent.getStringExtra(USER_FULLNAME)
+        userFullName.text = user.fullName
 
         val userUserName: TextView = findViewById(R.id.user_name)
-        userUserName.text = intent.getStringExtra(USER_USERNAME)
+        userUserName.text = user.userName
 
         val userLocation: TextView = findViewById(R.id.location)
-        userLocation.text = intent.getStringExtra(USER_LOCATION)
+        userLocation.text = user.location
 
         val userCompany: TextView = findViewById(R.id.company)
-        userCompany.text = intent.getStringExtra(USER_COMPANY)
+        userCompany.text = user.company
 
         val userRepositories: TextView = findViewById(R.id.repositories)
-        userRepositories.text = intent.getStringExtra(USER_REPO)
+        userRepositories.text = user.repository.toString()
 
         val userFollowers: TextView = findViewById(R.id.followers)
-        userFollowers.text = intent.getStringExtra(USER_FOLLOWERS)
+        userFollowers.text = user.follower.toString()
 
         val userFollowing: TextView = findViewById(R.id.following)
-        userFollowing.text = intent.getStringExtra(USER_FOLLOWING)
+        userFollowing.text = user.following.toString()
 
     }
 

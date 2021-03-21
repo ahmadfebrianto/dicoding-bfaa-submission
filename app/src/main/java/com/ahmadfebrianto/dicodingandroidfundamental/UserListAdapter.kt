@@ -43,17 +43,11 @@ class UserListAdapter(private val userList: ArrayList<User>): RecyclerView.Adapt
         val classContext = holder.itemView.context
 
         holder.itemView.setOnClickListener{
-            val detailIntent = Intent(classContext, UserDetail::class.java)
-            detailIntent.putExtra(UserDetail.USER_PROFILE, user.profile.toString())
-            detailIntent.putExtra(UserDetail.USER_FULLNAME, user.fullName)
-            detailIntent.putExtra(UserDetail.USER_USERNAME, user.userName)
-            detailIntent.putExtra(UserDetail.USER_LOCATION, user.location)
 
-            detailIntent.putExtra(UserDetail.USER_COMPANY, user.company)
-            detailIntent.putExtra(UserDetail.USER_REPO, user.repository.toString())
-            detailIntent.putExtra(UserDetail.USER_FOLLOWERS, user.follower.toString())
-            detailIntent.putExtra(UserDetail.USER_FOLLOWING, user.following.toString())
-            classContext.startActivity(detailIntent)
+            val userDetailIntent = Intent(classContext, UserDetail::class.java)
+            userDetailIntent.putExtra(UserDetail.USER_OBJECT, user)
+
+            classContext.startActivity(userDetailIntent)
 
         }
     }
