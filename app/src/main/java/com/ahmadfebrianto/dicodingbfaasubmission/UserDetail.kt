@@ -1,9 +1,9 @@
-package com.ahmadfebrianto.dicodingandroidfundamental
+package com.ahmadfebrianto.dicodingbfaasubmission
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
@@ -25,9 +25,9 @@ class UserDetail : AppCompatActivity() {
 
         val userProfile: ImageView = findViewById(R.id.user_profile)
         Glide.with(this)
-            .load(user.profile)
-            .apply(RequestOptions())
-            .into(userProfile)
+                .load(user.profile)
+                .apply(RequestOptions())
+                .into(userProfile)
 
         val userFullName: TextView = findViewById(R.id.full_name)
         userFullName.text = user.fullName

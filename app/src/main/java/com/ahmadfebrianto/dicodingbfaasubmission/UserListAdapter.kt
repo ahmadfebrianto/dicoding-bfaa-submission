@@ -1,4 +1,4 @@
-package com.ahmadfebrianto.dicodingandroidfundamental
+package com.ahmadfebrianto.dicodingbfaasubmission
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -12,10 +12,10 @@ import com.bumptech.glide.request.RequestOptions
 import java.util.*
 
 
-class UserListAdapter(private val userList: ArrayList<User>): RecyclerView.Adapter<UserListAdapter.ListViewHolder>() {
+class UserListAdapter(private val userList: ArrayList<User>) : RecyclerView.Adapter<UserListAdapter.ListViewHolder>() {
 
     private lateinit var onItemClickCallback: OnItemClickCallback
-    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback){
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback
     }
 
@@ -32,9 +32,9 @@ class UserListAdapter(private val userList: ArrayList<User>): RecyclerView.Adapt
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val user = userList[position]
         Glide.with(holder.itemView.context)
-            .load(user.profile)
-            .apply(RequestOptions().override(55,55))
-            .into(holder.userProfile)
+                .load(user.profile)
+                .apply(RequestOptions().override(55, 55))
+                .into(holder.userProfile)
 
         holder.userFullName.text = user.fullName
         holder.userUserName.text = user.userName
@@ -42,7 +42,7 @@ class UserListAdapter(private val userList: ArrayList<User>): RecyclerView.Adapt
 
         val classContext = holder.itemView.context
 
-        holder.itemView.setOnClickListener{
+        holder.itemView.setOnClickListener {
 
             val userDetailIntent = Intent(classContext, UserDetail::class.java)
             userDetailIntent.putExtra(UserDetail.USER_OBJECT, user)
@@ -52,7 +52,7 @@ class UserListAdapter(private val userList: ArrayList<User>): RecyclerView.Adapt
         }
     }
 
-    inner class ListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var userProfile: ImageView = itemView.findViewById(R.id.user_profile)
         var userFullName: TextView = itemView.findViewById(R.id.full_name)
         var userUserName: TextView = itemView.findViewById(R.id.user_name)

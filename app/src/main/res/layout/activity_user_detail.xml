@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,21 +10,21 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="#b2ebf2"/>
+        android:background="#b2ebf2" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
 
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp" >
+            android:layout_marginTop="50dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/user_profile"
@@ -45,12 +44,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="75dp"
-                    android:paddingTop="15dp"
-                    android:paddingBottom="15dp"
                     android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
                     android:paddingRight="15dp"
-                    app:cardCornerRadius="15dp"
-                    app:cardBackgroundColor="#fafaf6">
+                    android:paddingBottom="15dp"
+                    app:cardBackgroundColor="#fafaf6"
+                    app:cardCornerRadius="15dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -61,39 +60,39 @@
                             android:id="@+id/full_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="100dp"
                             android:text="@string/full_name"
                             android:textSize="25sp"
-                            android:textStyle="bold"
-                            android:layout_marginTop="100dp"
-                            android:layout_gravity="center_horizontal"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/user_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
-                            android:textStyle="italic"
+                            android:layout_gravity="center_horizontal"
                             android:text="@string/user_name"
-                            android:layout_gravity="center_horizontal" />
+                            android:textSize="15sp"
+                            android:textStyle="italic" />
 
                         <TextView
                             android:id="@+id/location"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:text="@string/location"
+                            android:layout_gravity="center_horizontal"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="5dp"
-                            android:layout_gravity="center_horizontal"/>
+                            android:text="@string/location"
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/company"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:text="@string/company_name"
+                            android:layout_gravity="center_horizontal"
                             android:layout_marginBottom="10dp"
-                            android:layout_gravity="center_horizontal"/>
+                            android:text="@string/company_name"
+                            android:textSize="16sp" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -101,16 +100,16 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:orientation="horizontal"
-                    android:weightSum="2"
-                    android:layout_marginTop="20dp">
+                    android:weightSum="2">
 
                     <LinearLayout
                         android:layout_width="62dp"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
+                        android:orientation="vertical"
                         android:theme="@style/item_background">
 
                         <TextView
@@ -118,25 +117,25 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:textStyle="bold"
+                            android:text="@string/number_of_followers"
                             android:textSize="35sp"
-                            android:text="@string/number_of_followers" />
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:textSize="18sp"
-                            android:text="@string/followers" />
+                            android:text="@string/followers"
+                            android:textSize="18sp" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="62dp"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
+                        android:orientation="vertical"
                         android:theme="@style/item_background">
 
                         <TextView
@@ -144,16 +143,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:textStyle="bold"
+                            android:text="@string/number_of_following"
                             android:textSize="35sp"
-                            android:text="@string/number_of_following" />
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:textSize="18sp"
-                            android:text="@string/following" />
+                            android:text="@string/following"
+                            android:textSize="18sp" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -161,58 +160,58 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="2"
                     android:layout_marginTop="20dp"
-                    android:theme="@style/item_background">
+                    android:orientation="horizontal"
+                    android:theme="@style/item_background"
+                    android:weightSum="2">
 
                     <LinearLayout
                         android:layout_width="62dp"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_gravity="center_horizontal"
-                        android:layout_weight="1" >
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/repositories"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:textStyle="bold"
+                            android:text="@string/owned_repositories"
                             android:textSize="35sp"
-                            android:text="@string/owned_repositories" />
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:textSize="18sp"
-                            android:text="@string/repositories" />
+                            android:text="@string/repositories"
+                            android:textSize="18sp" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="62dp"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
+                        android:orientation="vertical"
                         android:theme="@style/item_background">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:textStyle="bold"
+                            android:text="@string/number_of_projects"
                             android:textSize="35sp"
-                            android:text="@string/number_of_projects" />
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:textSize="18sp"
-                            android:text="@string/projects" />
+                            android:text="@string/projects"
+                            android:textSize="18sp" />
 
                     </LinearLayout>
 

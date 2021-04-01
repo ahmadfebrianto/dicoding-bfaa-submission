@@ -1,9 +1,9 @@
-package com.ahmadfebrianto.dicodingandroidfundamental
+package com.ahmadfebrianto.dicodingbfaasubmission
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
@@ -18,9 +18,9 @@ class AboutMe : AppCompatActivity() {
 
         val profilePicView: ImageView = findViewById(R.id.student_picture)
         Glide.with(this)
-            .load(R.drawable.my_picture)
-            .apply(RequestOptions())
-            .into(profilePicView)
+                .load(R.drawable.my_picture)
+                .apply(RequestOptions())
+                .into(profilePicView)
 
         val studentNameView: TextView = findViewById(R.id.student_name)
         val myName = "Ahmad Febrianto"
