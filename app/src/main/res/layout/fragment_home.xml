@@ -15,6 +15,7 @@
         android:background="@drawable/shape_background"
         android:iconifiedByDefault="false"
         android:queryHint="@string/query_hint"
+        android:queryBackground="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"

@@ -14,17 +14,12 @@ import com.bumptech.glide.Glide
 
 class FollowersAdapter: RecyclerView.Adapter<FollowersAdapter.ListViewHolder>() {
 
-    private lateinit var onItemClickCallBack: SearchResultAdapter.OnItemClickCallback
     private val followerList = ArrayList<User>()
 
     class ListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var userAvatar: ImageView = itemView.findViewById(R.id.iv_avatar)
         var userUserName: TextView = itemView.findViewById(R.id.tv_userName)
         var userProfileUrl: TextView = itemView.findViewById(R.id.tv_profileUrl)
-    }
-
-    fun setOnItemCallBack(onItemClickCallBack: SearchResultAdapter.OnItemClickCallback) {
-        this.onItemClickCallBack = onItemClickCallBack
     }
 
     fun setData(items: ArrayList<User>) {

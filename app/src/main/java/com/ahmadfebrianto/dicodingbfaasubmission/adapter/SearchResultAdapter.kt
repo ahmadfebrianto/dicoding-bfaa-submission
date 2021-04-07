@@ -15,15 +15,6 @@ import com.bumptech.glide.Glide
 class SearchResultAdapter(): RecyclerView.Adapter<SearchResultAdapter.ListViewHolder>() {
 
     private val userList = ArrayList<User>()
-    private lateinit var onItemClickCallback: OnItemClickCallback
-
-    interface OnItemClickCallback {
-        fun onItemClicked(data: User)
-    }
-
-    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback){
-        this.onItemClickCallback = onItemClickCallback
-    }
 
     inner class ListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var userAvatar: ImageView = itemView.findViewById(R.id.iv_avatar)
