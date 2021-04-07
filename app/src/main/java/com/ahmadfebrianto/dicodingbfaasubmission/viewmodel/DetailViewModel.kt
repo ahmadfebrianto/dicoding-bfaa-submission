@@ -54,7 +54,7 @@ class DetailViewModel : ViewModel() {
                 responseBody: ByteArray?,
                 error: Throwable
             ) {
-                Log.d("GAGAL", error.message.toString())
+                Log.d("onFailure", error.message.toString())
             }
         })
     }

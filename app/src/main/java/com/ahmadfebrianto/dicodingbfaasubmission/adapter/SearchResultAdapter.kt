@@ -12,7 +12,7 @@ import com.ahmadfebrianto.dicodingbfaasubmission.model.User
 import com.ahmadfebrianto.dicodingbfaasubmission.ui.userdetail.UserDetailActivity
 import com.bumptech.glide.Glide
 
-class SearchResultAdapter(): RecyclerView.Adapter<SearchResultAdapter.ListViewHolder>() {
+class SearchResultAdapter: RecyclerView.Adapter<SearchResultAdapter.ListViewHolder>() {
 
     private val userList = ArrayList<User>()
 

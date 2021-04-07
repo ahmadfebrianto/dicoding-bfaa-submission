@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ahmadfebrianto.dicodingbfaasubmission.R
@@ -62,6 +63,8 @@ class SearchResultFragment : Fragment()  {
 
     private fun showRecyclerList() {
         rvUser = view?.findViewById(R.id.rv_user)!!
+        val itemDecor = DividerItemDecoration(context, RecyclerView.VERTICAL)
+        rvUser.addItemDecoration(itemDecor)
         rvUser.setHasFixedSize(true)
         rvUser.layoutManager = LinearLayoutManager(activity)
         adapter = SearchResultAdapter()

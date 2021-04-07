@@ -40,6 +40,7 @@ class FollowingViewModel: ViewModel() {
                         val user = User()
                         user.avatarUrl = jsonObject.getString("avatar_url")
                         user.username = jsonObject.getString("login")
+                        user.userId = jsonObject.getInt("id")
                         user.profileUrl = jsonObject.getString("html_url")
 
                         userObjects.add(user)
@@ -57,7 +58,7 @@ class FollowingViewModel: ViewModel() {
                 responseBody: ByteArray?,
                 error: Throwable?
             ) {
-                Log.d("GAGAL", error?.message.toString())
+                Log.d("onFailure", error?.message.toString())
             }
         })
     }

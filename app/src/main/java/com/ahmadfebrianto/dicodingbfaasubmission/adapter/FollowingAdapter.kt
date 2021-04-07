@@ -19,6 +19,7 @@ class FollowingAdapter: RecyclerView.Adapter<FollowingAdapter.ListViewHolder>() 
     class ListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var userAvatar: ImageView = itemView.findViewById(R.id.iv_avatar)
         var userUserName: TextView = itemView.findViewById(R.id.tv_userName)
+        var userId: TextView = itemView.findViewById(R.id.tv_userId)
         var userProfileUrl: TextView = itemView.findViewById(R.id.tv_profileUrl)
     }
 
@@ -40,6 +41,7 @@ class FollowingAdapter: RecyclerView.Adapter<FollowingAdapter.ListViewHolder>() 
             .load(user.avatarUrl)
             .into(holder.userAvatar)
         holder.userUserName.text = user.username
+        holder.userId.text = user.userId.toString()
         holder.userProfileUrl.text = user.profileUrl
 
         holder.itemView.setOnClickListener {

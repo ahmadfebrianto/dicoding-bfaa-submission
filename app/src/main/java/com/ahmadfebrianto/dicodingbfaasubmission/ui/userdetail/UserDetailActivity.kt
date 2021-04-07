@@ -29,14 +29,13 @@ class UserDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityUserDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         user = intent.getParcelableExtra(USER_OBJECT)
         supportActionBar?.title = user?.username
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        binding.progressBar.visibility = View.GONE
+
         user?.let { setDataDetail(it) }
         user?.let { setFollowersFollowing(it) }
-
+        binding.progressBar.visibility = View.INVISIBLE
     }
 
     private fun setDataDetail(user: User) {
@@ -52,7 +51,6 @@ class UserDetailActivity : AppCompatActivity() {
                 Glide.with(this)
                     .load(userObject.avatarUrl)
                     .into(binding.ivAvatar)
-                println(userObject.avatarUrl)
                 binding.tvName.text = userObject.name
                 binding.tvCompany.text = userObject.company
                 binding.tvLocation.text = userObject.location

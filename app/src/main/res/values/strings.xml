@@ -12,5 +12,6 @@
 
     <string name="followers">Followers</string>
     <string name="following">Following</string>
-    <string name="repository">Repository</string>
+    <string name="repository">Repository</string>=
+    <string name="tv_userId">User ID</string>
 </resources>

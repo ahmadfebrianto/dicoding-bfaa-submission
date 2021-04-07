@@ -12,7 +12,7 @@
         android:id="@+id/sv_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_background"
+        android:background="@drawable/sv_background"
         android:iconifiedByDefault="false"
         android:queryHint="@string/query_hint"
         android:queryBackground="@null"
