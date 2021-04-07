@@ -56,6 +56,7 @@ class UserDetailActivity : AppCompatActivity() {
                 binding.tvName.text = userObject.name
                 binding.tvCompany.text = userObject.company
                 binding.tvLocation.text = userObject.location
+                binding.tvBio.text = userObject.bio
                 binding.tvFollowers.text = userObject.followers.toString()
                 binding.tvFollowing.text = userObject.following.toString()
                 binding.tvRepo.text = userObject.repository.toString()

@@ -33,9 +33,10 @@
             <TextView
                 android:id="@+id/tv_name"
                 style="@style/TextContext.ExtraLarge"
-                android:layout_marginTop="4dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/iv_avatar"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Name" />
@@ -46,8 +47,8 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="16dp"
-                android:drawablePadding="3dp"
-                app:drawableStartCompat="@drawable/ic_avatar_circle_24"
+                android:drawablePadding="7dp"
+                app:drawableStartCompat="@drawable/ic_company_14"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/iv_avatar"
@@ -58,21 +59,37 @@
                 android:id="@+id/tv_location"
                 style="@style/TextContext.Regular"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginEnd="16dp"
-                android:drawablePadding="3dp"
-                app:drawableStartCompat="@drawable/ic_location_24"
+                android:drawablePadding="7dp"
+                app:drawableStartCompat="@drawable/ic_location_14"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/iv_avatar"
                 app:layout_constraintTop_toBottomOf="@+id/tv_company"
                 tools:text="Location" />
 
+            <TextView
+                android:id="@+id/tv_bio"
+                style="@style/TextContext.Regular"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:drawablePadding="7dp"
+                app:drawableStartCompat="@drawable/ic_bio_14"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+                app:layout_constraintTop_toBottomOf="@+id/tv_location"
+                tools:text="Bio" />
+
             <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:baselineAligned="false"
                 android:gravity="center"
@@ -80,7 +97,7 @@
                 android:weightSum="3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_location">
+                app:layout_constraintTop_toBottomOf="@+id/tv_bio">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -153,7 +170,6 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             app:tabBackground="@drawable/shape_follow_tab"
-            app:tabIndicatorColor="@color/colorPrimary"
             app:tabSelectedTextColor="@color/colorPrimaryVariant"
             app:tabTextAppearance="@style/TextContext.Large"
             app:tabTextColor="@color/darker" />
