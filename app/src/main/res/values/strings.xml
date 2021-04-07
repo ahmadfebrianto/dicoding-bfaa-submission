@@ -1,24 +1,16 @@
 <resources>
     <string name="app_name">Github Users</string>
-    <string name="student_name">Student Name</string>
-    <string name="student_email">Student Email</string>
-    <string name="about_me">About Me</string>
+    <string name="title_activity_user_detail">UserDetailActivity</string>
+    <string name="query_hint">Enter username</string>
+    <string name="search_result_fragment">Search result fragment</string>
+    <string name="tv_full_name">Full Name</string>
+    <string name="tv_username">User Name</string>
+    <string name="tv_profile_url">Profile URL</string>
 
-    <string name="user_name">Username</string>
-    <string name="full_name">Full Name</string>
-    <string name="location">Location</string>
+    <string name="tab_text_1">Followers</string>
+    <string name="tab_text_2">Following</string>
 
-    <string name="company_name">Company Name</string>
-    <string name="company">Company</string>
-
-    <string name="owned_repositories">0</string>
-    <string name="repositories">Repositories</string>
-
-    <string name="number_of_followers">0</string>
     <string name="followers">Followers</string>
-
-    <string name="number_of_following">0</string>
     <string name="following">Following</string>
-    <string name="number_of_projects">0</string>
-    <string name="projects">Projects</string>
+    <string name="repository">Repository</string>
 </resources>

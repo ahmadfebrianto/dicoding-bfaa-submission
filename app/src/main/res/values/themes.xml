@@ -1,7 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.DicodingAndroidFundamental" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
+    <style name="Theme.DicodingBFAASubmission" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="colorPrimary">#00bcd4</item>
         <item name="colorPrimaryVariant">#0097a7</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -14,7 +13,23 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="item_background">
-        <item name="android:background">#fafaf6</item>
+    <style name="TextContext" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+
+    <style name="TextContext.ExtraLarge">
+        <item name = "android:textStyle">bold</item>
+        <item name = "android:textSize">18sp</item>
+    </style>
+
+    <style name="TextContext.Large">
+        <item name = "android:textStyle">bold</item>
+        <item name = "android:textSize">14sp</item>
+    </style>
+
+    <style name="TextContext.Regular">
+        <item name = "android:textSize">12sp</item>
     </style>
 </resources>
