@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GithubUserSearch</string>
+    <string name="app_name">Github Users</string>
     <string name="title_activity_user_detail">UserDetailActivity</string>
     <string name="query_hint">Enter username</string>
     <string name="search_result_fragment">Search result fragment</string>

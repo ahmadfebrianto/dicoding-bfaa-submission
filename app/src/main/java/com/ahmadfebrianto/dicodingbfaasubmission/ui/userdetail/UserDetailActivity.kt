@@ -32,22 +32,20 @@ class UserDetailActivity : AppCompatActivity() {
         user = intent.getParcelableExtra(USER_OBJECT)
         supportActionBar?.title = user?.username
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         user?.let { setDataDetail(it) }
         user?.let { setFollowersFollowing(it) }
-        binding.progressBar.visibility = View.INVISIBLE
     }
 
     private fun setDataDetail(user: User) {
-
         detailViewModel = ViewModelProvider(
             this, ViewModelProvider.NewInstanceFactory()
         ).get(DetailViewModel::class.java)
 
         detailViewModel.setUserData(user.username)
         detailViewModel.getUserData().observe(this, { userObject ->
-            if (userObject != null) {
 
+            if (userObject != null) {
+                binding.progressBar.visibility = View.GONE
                 Glide.with(this)
                     .load(userObject.avatarUrl)
                     .into(binding.ivAvatar)
