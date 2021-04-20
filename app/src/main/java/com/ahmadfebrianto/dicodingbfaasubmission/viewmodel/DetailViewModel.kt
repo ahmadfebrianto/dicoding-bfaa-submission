@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.ahmadfebrianto.dicodingbfaasubmission.BuildConfig
 import com.ahmadfebrianto.dicodingbfaasubmission.model.User
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.AsyncHttpResponseHandler
@@ -14,11 +15,10 @@ class DetailViewModel : ViewModel() {
     private val userObject = MutableLiveData<User>()
 
     fun setUserData(username: String?) {
-        val token = "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"
         val url = "https://api.github.com/users/$username"
 
         val client = AsyncHttpClient()
-        client.addHeader("Authorization", token)
+        client.addHeader("Authorization", BuildConfig.GITHUB_TOKEN)
         client.addHeader("User-Agent", "request")
 
         client.get(url, object : AsyncHttpResponseHandler() {

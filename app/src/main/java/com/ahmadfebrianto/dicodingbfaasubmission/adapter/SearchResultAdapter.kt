@@ -54,5 +54,4 @@ class SearchResultAdapter: RecyclerView.Adapter<SearchResultAdapter.ListViewHold
 
     override fun getItemCount(): Int = userList.size
 
-
 }

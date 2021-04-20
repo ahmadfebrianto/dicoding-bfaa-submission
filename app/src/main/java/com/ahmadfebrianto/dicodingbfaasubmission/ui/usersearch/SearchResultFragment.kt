@@ -1,27 +1,25 @@
 package com.ahmadfebrianto.dicodingbfaasubmission.ui.usersearch
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ahmadfebrianto.dicodingbfaasubmission.R
 import com.ahmadfebrianto.dicodingbfaasubmission.adapter.SearchResultAdapter
-import com.ahmadfebrianto.dicodingbfaasubmission.model.User
 import com.ahmadfebrianto.dicodingbfaasubmission.viewmodel.SearchViewModel
 
-class SearchResultFragment : Fragment()  {
-    companion object{
+class SearchResultFragment : Fragment() {
+    companion object {
         var KEYWORD = "keyword"
     }
 
     private lateinit var rvUser: RecyclerView
-
     private lateinit var adapter: SearchResultAdapter
     private lateinit var searchViewModel: SearchViewModel
 
@@ -39,17 +37,17 @@ class SearchResultFragment : Fragment()  {
 
         showRecyclerList()
         searchViewModel = ViewModelProvider(
-                this, ViewModelProvider.NewInstanceFactory()
+            this, ViewModelProvider.NewInstanceFactory()
         ).get(SearchViewModel::class.java)
 
         searchViewModel.getUserList().observe(
-                viewLifecycleOwner, { listOfUsers ->
-            if (listOfUsers != null) {
-                adapter.setData(listOfUsers)
-                progressBar?.visibility = View.GONE
+            viewLifecycleOwner, { listOfUsers ->
+                if (listOfUsers != null) {
+                    adapter.setData(listOfUsers)
+                    progressBar?.visibility = View.GONE
 
+                }
             }
-        }
         )
 
         if (arguments != null) {

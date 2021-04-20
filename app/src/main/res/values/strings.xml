@@ -7,11 +7,20 @@
     <string name="tv_username">User Name</string>
     <string name="tv_profile_url">Profile URL</string>
 
-    <string name="tab_text_1">Followers</string>
-    <string name="tab_text_2">Following</string>
-
     <string name="followers">Followers</string>
     <string name="following">Following</string>
     <string name="repository">Repository</string>=
     <string name="tv_userId">User ID</string>
+    <string name="favorite_users">Favorite Users</string>
+    <string name="settings">Settings</string>
+
+    <!--Reminder-->
+    <string name="key_reminder">reminder</string>
+    <string name="reminder">Reminder</string>
+    <string name="reminder_on">Daily reminder is active</string>
+    <string name="reminder_off">Daily reminder is inactive</string>
+    <string name="notification_title">Github User Search</string>
+    <string name="notification_message">It\'s time to goof around on Github. Come on!</string>
+    <string name="refresh">Refresh List</string>
+
 </resources>

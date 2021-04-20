@@ -1,16 +1,14 @@
 package com.ahmadfebrianto.dicodingbfaasubmission.ui.usersearch
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView
+import androidx.fragment.app.Fragment
 import com.ahmadfebrianto.dicodingbfaasubmission.R
-import com.ahmadfebrianto.dicodingbfaasubmission.adapter.SearchResultAdapter
-import com.ahmadfebrianto.dicodingbfaasubmission.viewmodel.SearchViewModel
 
-class HomeFragment: Fragment() {
+class HomeFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -18,14 +16,14 @@ class HomeFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        return  inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val svUserName: SearchView = view.findViewById(R.id.sv_username)
-        svUserName.setOnQueryTextListener(object: SearchView.OnQueryTextListener {
+        svUserName.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 if (query != null) {
                     val bundle = Bundle()
@@ -35,7 +33,11 @@ class HomeFragment: Fragment() {
                     searchResultFragment.arguments = bundle
 
                     fragmentManager?.beginTransaction()?.apply {
-                        replace(R.id.frame_container, searchResultFragment, SearchResultFragment::class.java.simpleName)
+                        replace(
+                            R.id.frame_container,
+                            searchResultFragment,
+                            SearchResultFragment::class.java.simpleName
+                        )
                         addToBackStack(null)
                         commit()
                     }

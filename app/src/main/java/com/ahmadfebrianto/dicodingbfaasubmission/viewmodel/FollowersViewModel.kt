@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.ahmadfebrianto.dicodingbfaasubmission.BuildConfig
 import com.ahmadfebrianto.dicodingbfaasubmission.model.User
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.AsyncHttpResponseHandler
@@ -18,11 +19,10 @@ class FollowersViewModel: ViewModel() {
     fun setFollowerList(username: String) {
         val userObjects = ArrayList<User>()
 
-        val token = "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"
         val url = "https://api.github.com/users/$username/followers?page=1&per_page=20"
 
         val client = AsyncHttpClient()
-        client.addHeader("Authorization", token)
+        client.addHeader("Authorization", BuildConfig.GITHUB_TOKEN)
         client.addHeader("User-Agent", "request")
 
         client.get(url, object : AsyncHttpResponseHandler() {

@@ -13,8 +13,8 @@ class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager)
     var username: String? = null
 
     private val tabTables = intArrayOf(
-        R.string.tab_text_1,
-        R.string.tab_text_2
+        R.string.followers,
+        R.string.following
     )
 
     override fun getCount(): Int = 2
