@@ -39,7 +39,7 @@ class FavoriteUserAdapter(private val favUserList: ArrayList<User>): RecyclerVie
 
     override fun getItemCount(): Int = favUserList.size
 
-    fun refreshDataset(favUsers: ArrayList<User>) {
+    fun refreshFavUserList(favUsers: ArrayList<User>) {
         favUserList.clear()
         favUserList.addAll(favUsers)
         notifyDataSetChanged()
