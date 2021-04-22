@@ -12,7 +12,7 @@ internal class DatabaseHelper(context: Context) : SQLiteOpenHelper(
         private const val DATABASE_NAME = "github_users"
         private const val DATABASE_VERSION = 1
         private const val SQL_CREATE_TABLE_FAV_USERS = "CREATE TABLE $TABLE_NAME" +
-                " (${DatabaseContract.NoteColumns.USER_ID} INTEGER PRIMARY KEY," +
+                " (${DatabaseContract.NoteColumns._USER_ID} INTEGER PRIMARY KEY," +
                 " ${DatabaseContract.NoteColumns.USER_AVATAR_URL} TEXT NOT NULL," +
                 " ${DatabaseContract.NoteColumns.USERNAME} TEXT NOT NULL," +
                 " ${DatabaseContract.NoteColumns.USER_PROFILE_URL} TEXT NOT NULL)"

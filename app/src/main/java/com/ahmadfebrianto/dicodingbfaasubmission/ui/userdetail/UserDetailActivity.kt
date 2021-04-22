@@ -1,15 +1,16 @@
 package com.ahmadfebrianto.dicodingbfaasubmission.ui.userdetail
 
+import android.content.ContentValues
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.ViewModelProvider
 import com.ahmadfebrianto.dicodingbfaasubmission.R
 import com.ahmadfebrianto.dicodingbfaasubmission.adapter.SectionsPagerAdapter
 import com.ahmadfebrianto.dicodingbfaasubmission.databinding.ActivityUserDetailBinding
-import com.ahmadfebrianto.dicodingbfaasubmission.db.DatabaseHelper
+import com.ahmadfebrianto.dicodingbfaasubmission.db.DatabaseContract
+import com.ahmadfebrianto.dicodingbfaasubmission.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
 import com.ahmadfebrianto.dicodingbfaasubmission.db.FavoriteUserHelper
 import com.ahmadfebrianto.dicodingbfaasubmission.model.User
 import com.ahmadfebrianto.dicodingbfaasubmission.viewmodel.DetailViewModel
@@ -20,6 +21,7 @@ class UserDetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUserDetailBinding
     private lateinit var detailViewModel: DetailViewModel
     private lateinit var favUserHelper: FavoriteUserHelper
+    private lateinit var uriWithId: Uri
     private var user: User? = null
 
     companion object {
@@ -91,6 +93,15 @@ class UserDetailActivity : AppCompatActivity() {
         }
     }
 
+    private fun insertFavUser(user: User): Uri? {
+        val args = ContentValues()
+        args.put(DatabaseContract.NoteColumns._USER_ID, user.userId)
+        args.put(DatabaseContract.NoteColumns.USERNAME, user.username)
+        args.put(DatabaseContract.NoteColumns.USER_AVATAR_URL, user.avatarUrl)
+        args.put(DatabaseContract.NoteColumns.USER_PROFILE_URL, user.profileUrl)
+        return contentResolver.insert(CONTENT_URI, args)
+    }
+
     private fun setFavoriteStatus() {
         when (checkFavoriteUser()) {
             true -> binding.fabFavorite.setImageResource(R.drawable.ic_is_favorite)
@@ -101,11 +112,12 @@ class UserDetailActivity : AppCompatActivity() {
     private fun handleFavUser() {
         when (checkFavoriteUser()) {
             true -> {
-                favUserHelper.deleteFavUser(user!!.userId)
+                uriWithId = Uri.parse(CONTENT_URI.toString() + "/" + user?.userId)
+                contentResolver.delete(uriWithId, null, null)
                 setFavoriteStatus()
             }
             else -> {
-                favUserHelper.insertFavUser(user!!)
+                insertFavUser(user!!)
                 setFavoriteStatus()
             }
         }
