@@ -1,18 +1,18 @@
-package com.ahmadfebrianto.dicodingbfaasubmission.ui.userdetail
+package com.ahmadfebrianto.consumerapp.ui.userdetail
 
 import android.content.ContentValues
 import android.net.Uri
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.ahmadfebrianto.dicodingbfaasubmission.R
-import com.ahmadfebrianto.dicodingbfaasubmission.adapter.SectionsPagerAdapter
-import com.ahmadfebrianto.dicodingbfaasubmission.databinding.ActivityUserDetailBinding
-import com.ahmadfebrianto.dicodingbfaasubmission.db.DatabaseContract
-import com.ahmadfebrianto.dicodingbfaasubmission.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
-import com.ahmadfebrianto.dicodingbfaasubmission.model.User
-import com.ahmadfebrianto.dicodingbfaasubmission.viewmodel.DetailViewModel
+import com.ahmadfebrianto.consumerapp.R
+import com.ahmadfebrianto.consumerapp.adapter.SectionsPagerAdapter
+import com.ahmadfebrianto.consumerapp.databinding.ActivityUserDetailBinding
+import com.ahmadfebrianto.consumerapp.db.DatabaseContract
+import com.ahmadfebrianto.consumerapp.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
+import com.ahmadfebrianto.consumerapp.model.User
+import com.ahmadfebrianto.consumerapp.viewmodel.DetailViewModel
 import com.bumptech.glide.Glide
 
 class UserDetailActivity : AppCompatActivity() {

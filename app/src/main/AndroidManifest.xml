@@ -21,7 +21,7 @@
             android:readPermission="com.ahmadfebrianto.dicodingbfaasubmission.READ_DATABASE"
             android:writePermission="com.ahmadfebrianto.dicodingbfaasubmission.WRITE_DATABASE" />
 
-        <activity android:name=".ui.favoriteusers.FavoriteUsersActivity" />
+        <activity android:name=".ui.favoriteuser.FavoriteUsersActivity" />
         <activity android:name=".ui.settings.SettingsActivity" />
         <activity android:name=".ui.userdetail.UserDetailActivity" />
         <activity android:name=".ui.usersearch.MainActivity">

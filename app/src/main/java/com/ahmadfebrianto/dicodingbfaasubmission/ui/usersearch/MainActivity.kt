@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.ahmadfebrianto.dicodingbfaasubmission.R
-import com.ahmadfebrianto.dicodingbfaasubmission.ui.favoriteusers.FavoriteUsersActivity
+import com.ahmadfebrianto.dicodingbfaasubmission.ui.favoriteuser.FavoriteUsersActivity
 import com.ahmadfebrianto.dicodingbfaasubmission.ui.settings.SettingsActivity
 
 class MainActivity : AppCompatActivity() {

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Consumer App</string>
+    <string name="tv_username">Username</string>
+    <string name="tv_userId">User ID</string>
+    <string name="tv_profile_url">Profile URL</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="repository">Repository</string>
+    <string name="consumer_app">Consumer App</string>
 </resources>

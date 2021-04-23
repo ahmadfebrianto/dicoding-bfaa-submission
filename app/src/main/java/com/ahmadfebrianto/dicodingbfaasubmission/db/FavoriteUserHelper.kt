@@ -47,7 +47,7 @@ class FavoriteUserHelper(context: Context) {
 
     fun queryById(id: String): Cursor {
         return database.query(
-            TABLE_NAME, null, "$_USER_ID = ?", arrayOf(id),
+            TABLE_NAME, null, "$_USER_ID=$id", null,
             null, null, null, null
         )
     }
@@ -63,12 +63,4 @@ class FavoriteUserHelper(context: Context) {
     fun deleteById(id: Int): Int {
         return database.delete(TABLE_NAME, "$_USER_ID=$id", null)
     }
-
-    fun checkFavUserById(id: Int): Int {
-        val cursor = database.rawQuery("select * from $TABLE_NAME where $_USER_ID=$id", null)
-        val num = cursor.count
-        cursor.close()
-        return num
-    }
-
 }

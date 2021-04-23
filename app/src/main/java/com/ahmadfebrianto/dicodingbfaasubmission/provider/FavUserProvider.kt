@@ -15,7 +15,7 @@ class FavUserProvider : ContentProvider() {
 
     companion object {
         private const val USER = 1
-        private const val USER_ID = 1
+        private const val USER_ID = 2
         private lateinit var favUserHelper: FavoriteUserHelper
         private val uriMatcher = UriMatcher(UriMatcher.NO_MATCH)
 

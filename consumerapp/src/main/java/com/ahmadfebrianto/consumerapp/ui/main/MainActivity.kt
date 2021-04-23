@@ -1,36 +1,32 @@
-package com.ahmadfebrianto.dicodingbfaasubmission.ui.favoriteuser
+package com.ahmadfebrianto.consumerapp.ui.main
 
 import android.database.ContentObserver
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.HandlerThread
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.ahmadfebrianto.dicodingbfaasubmission.R
-import com.ahmadfebrianto.dicodingbfaasubmission.adapter.FavoriteUserAdapter
-import com.ahmadfebrianto.dicodingbfaasubmission.databinding.ActivityFavoriteUsersBinding
-import com.ahmadfebrianto.dicodingbfaasubmission.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
-import com.ahmadfebrianto.dicodingbfaasubmission.helper.MappingHelper
-import com.ahmadfebrianto.dicodingbfaasubmission.model.User
-import java.util.*
+import com.ahmadfebrianto.consumerapp.R
+import com.ahmadfebrianto.consumerapp.adapter.FavoriteUserAdapter
+import com.ahmadfebrianto.consumerapp.databinding.ActivityMainBinding
+import com.ahmadfebrianto.consumerapp.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
+import com.ahmadfebrianto.consumerapp.helper.MappingHelper
+import com.ahmadfebrianto.consumerapp.model.User
+import java.util.ArrayList
 
-class FavoriteUsersActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityFavoriteUsersBinding
+class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
     private lateinit var adapter: FavoriteUserAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityFavoriteUsersBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.title = getString(R.string.favorite_users)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        binding.progressBar.visibility = View.VISIBLE
+        supportActionBar?.title = getString(R.string.consumer_app)
 
         val handlerThread = HandlerThread("DataObserver")
         handlerThread.start()
@@ -44,8 +40,6 @@ class FavoriteUsersActivity : AppCompatActivity() {
 
         contentResolver.registerContentObserver(CONTENT_URI, true, myObserver)
         showRecyclerList()
-
-        binding.progressBar.visibility = View.GONE
     }
 
     override fun onResume() {
@@ -71,10 +65,5 @@ class FavoriteUsersActivity : AppCompatActivity() {
         binding.rvUser.setHasFixedSize(true)
         adapter = getFavUserList()?.let { FavoriteUserAdapter(it) }!!
         binding.rvUser.adapter = adapter
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
     }
 }

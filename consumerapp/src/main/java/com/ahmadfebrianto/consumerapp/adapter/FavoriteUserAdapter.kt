@@ -1,19 +1,17 @@
-package com.ahmadfebrianto.dicodingbfaasubmission.adapter
+package com.ahmadfebrianto.consumerapp.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.ahmadfebrianto.dicodingbfaasubmission.databinding.UserRowBinding
-import com.ahmadfebrianto.dicodingbfaasubmission.model.User
-import com.ahmadfebrianto.dicodingbfaasubmission.ui.userdetail.UserDetailActivity
+import com.ahmadfebrianto.consumerapp.databinding.UserRowBinding
+import com.ahmadfebrianto.consumerapp.model.User
+import com.ahmadfebrianto.consumerapp.ui.userdetail.UserDetailActivity
 import com.bumptech.glide.Glide
 
-class FavoriteUserAdapter(private val favUserList: ArrayList<User>) :
-    RecyclerView.Adapter<FavoriteUserAdapter.ListViewHolder>() {
+class FavoriteUserAdapter(private val favUserList: ArrayList<User>): RecyclerView.Adapter<FavoriteUserAdapter.ListViewHolder>() {
 
-    inner class ListViewHolder(private val binding: UserRowBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    inner class ListViewHolder(private val binding: UserRowBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(user: User) {
             Glide.with(itemView.context)
                 .load(user.avatarUrl)
