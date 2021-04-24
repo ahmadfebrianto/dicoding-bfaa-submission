@@ -1,10 +1,10 @@
 package com.ahmadfebrianto.dicodingbfaasubmission.ui.usersearch
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import com.ahmadfebrianto.dicodingbfaasubmission.R
 import com.ahmadfebrianto.dicodingbfaasubmission.ui.favoriteuser.FavoriteUsersActivity
 import com.ahmadfebrianto.dicodingbfaasubmission.ui.settings.SettingsActivity

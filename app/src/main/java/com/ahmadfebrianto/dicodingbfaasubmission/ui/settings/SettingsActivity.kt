@@ -1,7 +1,7 @@
 package com.ahmadfebrianto.dicodingbfaasubmission.ui.settings
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.ahmadfebrianto.dicodingbfaasubmission.R
 
 class SettingsActivity : AppCompatActivity() {

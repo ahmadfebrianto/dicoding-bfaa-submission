@@ -12,11 +12,11 @@ import com.ahmadfebrianto.dicodingbfaasubmission.model.User
 import com.ahmadfebrianto.dicodingbfaasubmission.ui.userdetail.UserDetailActivity
 import com.bumptech.glide.Glide
 
-class FollowersAdapter: RecyclerView.Adapter<FollowersAdapter.ListViewHolder>() {
+class FollowersAdapter : RecyclerView.Adapter<FollowersAdapter.ListViewHolder>() {
 
     private val followerList = ArrayList<User>()
 
-    class ListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var userAvatar: ImageView = itemView.findViewById(R.id.iv_avatar)
         var userUserName: TextView = itemView.findViewById(R.id.tv_userName)
         var userId: TextView = itemView.findViewById(R.id.tv_userId)
@@ -30,7 +30,8 @@ class FollowersAdapter: RecyclerView.Adapter<FollowersAdapter.ListViewHolder>() 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.user_row, parent, false)
+        val view: View =
+            LayoutInflater.from(parent.context).inflate(R.layout.user_row, parent, false)
         return ListViewHolder(view)
     }
 

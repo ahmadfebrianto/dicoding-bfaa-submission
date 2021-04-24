@@ -5,13 +5,8 @@ import android.app.TimePickerDialog
 import android.content.Context
 import android.content.DialogInterface
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.TimePicker
 import androidx.fragment.app.DialogFragment
-import com.ahmadfebrianto.dicodingbfaasubmission.R
 import java.util.*
 
 class TimePickerFragment : DialogFragment(), TimePickerDialog.OnTimeSetListener {
@@ -21,7 +16,7 @@ class TimePickerFragment : DialogFragment(), TimePickerDialog.OnTimeSetListener 
         super.onAttach(context)
 
         val fragment = parentFragment
-        if(fragment is SettingsFragment){
+        if (fragment is SettingsFragment) {
             this.dialogTimeListener = fragment.dialogTimeListener
         }
     }

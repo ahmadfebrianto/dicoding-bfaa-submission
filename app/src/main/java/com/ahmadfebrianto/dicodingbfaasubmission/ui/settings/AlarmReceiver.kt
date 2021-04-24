@@ -31,7 +31,7 @@ class AlarmReceiver : BroadcastReceiver() {
         private const val TIME_FORMAT = "HH:mm"
 
         private const val CHANNEL_ID = "Channel_1"
-        private const val  CHANNEL_NAME = "AlarmManager channel"
+        private const val CHANNEL_NAME = "AlarmManager channel"
 
     }
 

@@ -25,9 +25,9 @@ class SearchViewModel : ViewModel() {
 
         client.get(url, object : AsyncHttpResponseHandler() {
             override fun onSuccess(
-                    statusCode: Int,
-                    headers: Array<out Header>?,
-                    responseBody: ByteArray
+                statusCode: Int,
+                headers: Array<out Header>?,
+                responseBody: ByteArray
             ) {
                 try {
                     val jsonString = String(responseBody)
@@ -53,10 +53,10 @@ class SearchViewModel : ViewModel() {
             }
 
             override fun onFailure(
-                    statusCode: Int,
-                    headers: Array<out Header>?,
-                    responseBody: ByteArray?,
-                    error: Throwable
+                statusCode: Int,
+                headers: Array<out Header>?,
+                responseBody: ByteArray?,
+                error: Throwable
             ) {
                 Log.d("onFailure", error.message.toString())
             }

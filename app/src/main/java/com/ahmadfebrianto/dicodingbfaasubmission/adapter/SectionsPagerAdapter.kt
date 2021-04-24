@@ -7,8 +7,8 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.ahmadfebrianto.dicodingbfaasubmission.R
 import com.ahmadfebrianto.dicodingbfaasubmission.ui.userdetail.UserListFragment
 
-class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager)
-    : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT){
+class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager) :
+    FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
     var username: String? = null
 

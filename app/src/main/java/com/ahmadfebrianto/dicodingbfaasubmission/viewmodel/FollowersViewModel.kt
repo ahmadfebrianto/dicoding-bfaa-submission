@@ -10,9 +10,8 @@ import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.AsyncHttpResponseHandler
 import cz.msebera.android.httpclient.Header
 import org.json.JSONArray
-import java.lang.Exception
 
-class FollowersViewModel: ViewModel() {
+class FollowersViewModel : ViewModel() {
 
     private val followerList = MutableLiveData<ArrayList<User>>()
 
@@ -64,5 +63,5 @@ class FollowersViewModel: ViewModel() {
         })
     }
 
-    fun getFollowerList() : LiveData<ArrayList<User>> = followerList
+    fun getFollowerList(): LiveData<ArrayList<User>> = followerList
 }

@@ -2,9 +2,9 @@ package com.ahmadfebrianto.consumerapp.ui.userdetail
 
 import android.content.ContentValues
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.ahmadfebrianto.consumerapp.R
 import com.ahmadfebrianto.consumerapp.adapter.SectionsPagerAdapter

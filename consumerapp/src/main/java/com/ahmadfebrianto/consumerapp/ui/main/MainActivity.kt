@@ -1,11 +1,10 @@
 package com.ahmadfebrianto.consumerapp.ui.main
 
 import android.database.ContentObserver
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.HandlerThread
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,7 +14,7 @@ import com.ahmadfebrianto.consumerapp.databinding.ActivityMainBinding
 import com.ahmadfebrianto.consumerapp.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
 import com.ahmadfebrianto.consumerapp.helper.MappingHelper
 import com.ahmadfebrianto.consumerapp.model.User
-import java.util.ArrayList
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

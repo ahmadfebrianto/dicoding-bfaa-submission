@@ -9,9 +9,11 @@ import com.ahmadfebrianto.consumerapp.model.User
 import com.ahmadfebrianto.consumerapp.ui.userdetail.UserDetailActivity
 import com.bumptech.glide.Glide
 
-class FavoriteUserAdapter(private val favUserList: ArrayList<User>): RecyclerView.Adapter<FavoriteUserAdapter.ListViewHolder>() {
+class FavoriteUserAdapter(private val favUserList: ArrayList<User>) :
+    RecyclerView.Adapter<FavoriteUserAdapter.ListViewHolder>() {
 
-    inner class ListViewHolder(private val binding: UserRowBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class ListViewHolder(private val binding: UserRowBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(user: User) {
             Glide.with(itemView.context)
                 .load(user.avatarUrl)

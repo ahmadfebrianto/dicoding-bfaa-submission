@@ -200,8 +200,8 @@
         android:elevation="8dp"
         android:focusable="true"
         android:importantForAccessibility="no"
-        app:srcCompat="@drawable/ic_is_favorite"
         app:backgroundTint="@color/grey"
-        app:fabSize="auto" />
+        app:fabSize="auto"
+        app:srcCompat="@drawable/ic_is_favorite" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

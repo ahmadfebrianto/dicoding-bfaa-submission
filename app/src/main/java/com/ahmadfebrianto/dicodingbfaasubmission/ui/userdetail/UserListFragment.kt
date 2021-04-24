@@ -1,11 +1,10 @@
 package com.ahmadfebrianto.dicodingbfaasubmission.ui.userdetail
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,11 +13,8 @@ import androidx.recyclerview.widget.RecyclerView.VERTICAL
 import com.ahmadfebrianto.dicodingbfaasubmission.R
 import com.ahmadfebrianto.dicodingbfaasubmission.adapter.FollowersAdapter
 import com.ahmadfebrianto.dicodingbfaasubmission.adapter.FollowingAdapter
-import com.ahmadfebrianto.dicodingbfaasubmission.adapter.SearchResultAdapter
-import com.ahmadfebrianto.dicodingbfaasubmission.model.User
 import com.ahmadfebrianto.dicodingbfaasubmission.viewmodel.FollowersViewModel
 import com.ahmadfebrianto.dicodingbfaasubmission.viewmodel.FollowingViewModel
-import java.security.acl.Owner
 
 
 class UserListFragment : Fragment() {
